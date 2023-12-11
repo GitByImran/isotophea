@@ -1,12 +1,12 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from "./components/theme-provider";
+
 import SideNavbar from "./shared/sideNavbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AuthProvider from "@/context/authContext";
 import Suggest from "./shared/suggest";
 import BottomNavbar from "./shared/bottomNavbar";
-import { useTheme } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import TopNavbar from "./shared/topNavbar";
 import { Toaster } from "@/components/ui/toaster";
