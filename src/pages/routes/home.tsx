@@ -11,7 +11,9 @@ const HomePage: React.FC = () => {
     isError: isPostError,
   } = useGetRecentPosts();
 
-  console.log(posts);
+  if (!posts) {
+    return;
+  }
 
   return (
     <div className="mx-auto" style={{ maxWidth: 500 }}>

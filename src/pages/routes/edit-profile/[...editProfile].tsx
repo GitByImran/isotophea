@@ -41,8 +41,11 @@ const EditProfile = () => {
   const { data: currentUser } = useGetUserById(id || "");
   const { mutateAsync: updateUser, isPending: isLoadingUpdate } =
     useUpdateUser();
+
   if (!currentUser)
     return <div className="w-full h-full flex-center">Loading...</div>;
+
+    if (!user || !id) return;
 
   const handleUpdate = async (value: z.infer<typeof profileValidation>) => {
     const updatedUser = await updateUser({

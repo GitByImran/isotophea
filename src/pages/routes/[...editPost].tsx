@@ -61,6 +61,8 @@ const EditPost = () => {
     }
   };
 
+  if (!user || !post || !getPostId) return;
+
   if (isPending) {
     return <div>loading...</div>;
   }
@@ -75,7 +77,7 @@ const EditPost = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-2 my-5"
+            className="my-5 space-y-2"
           >
             <FormField
               control={form.control}
@@ -85,7 +87,7 @@ const EditPost = () => {
                   <FormLabel>Caption</FormLabel>
                   <FormControl>
                     <Textarea
-                      className="custom-scrollbar textarea-suggestion rounded-xl w-full"
+                      className="w-full custom-scrollbar textarea-suggestion rounded-xl"
                       placeholder="what's on your mind..."
                       {...field}
                     />
@@ -118,7 +120,7 @@ const EditPost = () => {
                   <FormLabel>Add Location</FormLabel>
                   <FormControl>
                     <Input
-                      className="custom-scrollbar rounded-xl w-full"
+                      className="w-full custom-scrollbar rounded-xl"
                       {...field}
                     />
                   </FormControl>
@@ -134,7 +136,7 @@ const EditPost = () => {
                   <FormLabel>Add Tags</FormLabel>
                   <FormControl>
                     <Input
-                      className="custom-scrollbar rounded-xl w-full"
+                      className="w-full custom-scrollbar rounded-xl"
                       {...field}
                     />
                   </FormControl>

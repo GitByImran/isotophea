@@ -36,15 +36,15 @@ const Profile = () => {
           <div className="flex flex-row items-center w-full gap-5">
             <div className="w-16 h-16 border rounded-full">
               <img
-                key={currentUser.imageUrl}
-                src={currentUser.imageUrl}
+                key={currentUser?.imageUrl}
+                src={currentUser?.imageUrl}
                 alt=""
                 loading="lazy"
                 className="w-full h-full rounded-full"
               />
             </div>
             <div className="flex items-center justify-between flex-grow gap-5">
-              <p className="text-lg ">@{currentUser.username}</p>
+              <p className="text-lg ">@{currentUser?.username}</p>
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <Settings size={20} className="cursor-pointer" />
@@ -52,7 +52,7 @@ const Profile = () => {
                 <DropdownMenuContent align="end" className="">
                   <DropdownMenuItem>
                     <Link
-                      href={`/routes/edit-profile/${currentUser.$id}`}
+                      href={`/routes/edit-profile/${currentUser?.$id}`}
                       className="flex items-center gap-2 px-5 py-2 "
                     >
                       <PenSquare size={16} /> Edit Profile

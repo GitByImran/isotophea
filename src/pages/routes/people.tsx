@@ -19,6 +19,14 @@ const People = () => {
     return;
   }
 
+  if (!creators) {
+    return;
+  }
+
+  if (!user) {
+    return;
+  }
+
   const getCreators = creators?.documents.filter(
     (creator) => creator.$id !== user.id
   );

@@ -16,7 +16,6 @@ import {
 import { Models } from "appwrite";
 import Link from "next/link";
 import React, { useState } from "react";
-import useDebounce from "../hooks/uneDebounce";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Dot, MoveRight, Search, SearchIcon } from "lucide-react";
@@ -25,7 +24,6 @@ import { formatDate } from "@/lib/utils";
 
 const SearchBox = () => {
   const [searchValue, setSearchValue] = useState("");
-  /*   const debounceValue = useDebounce(searchValue, 500); */
   const { data: posts, fetchNextPage, hasNextPage } = useGetPosts();
   const {
     data: searchedPosts,
@@ -33,12 +31,14 @@ const SearchBox = () => {
     isFetched: isSearchFetchingComplete,
   } = useSearchPosts(searchValue);
 
-  const shouldShowSearchResults = searchValue !== "";
-  /*   const shouldShowPosts =
+  /*  const shouldShowSearchResults = searchValue !== "";
+   const shouldShowPosts =
     !shouldShowSearchResults &&
     posts?.pages.every((item) => item?.documents.length === 0); */
 
-  console.log(posts);
+  if (!posts) {
+    return;
+  }
   return (
     <div className="sm:max-w-[500px] sm:mx-auto">
       <div className="relative flex items-center gap-3">

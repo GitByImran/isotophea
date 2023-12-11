@@ -9,7 +9,6 @@ import Link from "next/link";
 const Saved = () => {
   const { data: currentUser, isLoading: isLoadingCurrentUser } =
     useGetCurrentUser();
-  const { user } = useUserContext();
 
   const savePosts = currentUser?.save
     .map((savePost: Models.Document) => ({
@@ -19,6 +18,10 @@ const Saved = () => {
       },
     }))
     .reverse();
+
+  if (!currentUser) {
+    return;
+  }
 
   return (
     <div className="sm:max-w-[500px] mx-auto">

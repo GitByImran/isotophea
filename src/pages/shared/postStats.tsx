@@ -17,6 +17,8 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
   const [likes, setLikes] = useState<string[]>(likesList);
   const [isSaved, setIsSaved] = useState(false);
 
+  if (!post || !userId) return;
+
   useEffect(() => {
     setLikes(likesList);
   }, [post]);
@@ -66,6 +68,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
       setIsSaved(true);
     }
   };
+
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">

@@ -51,6 +51,10 @@ const PostDetails = () => {
     }
   };
 
+  if (!user || !post) return;
+
+  console.log(user, post);
+
   return (
     <div className="sm:max-w-[500px] sm:mx-auto">
       <div className="flex items-center gap-2">
