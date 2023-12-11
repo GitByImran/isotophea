@@ -41,22 +41,24 @@ const Suggest = () => {
         {!restrictedForSuggest.includes(router?.asPath) &&
           getCreators?.map((creator, index) => (
             <Link
-              href=""
+              href={`/routes/profile/${creator?.$id}`}
               key={index}
-              className="col-span-12 overflow-hidden border border-gray-500 shadow-md rounded-xl"
+              className="col-span-12 overflow-hidden border shadow-md dark:border-gray-500 rounded-xl"
             >
               <div className="flex items-center justify-between w-full gap-3 px-2 py-5">
                 <div className="flex items-center w-full gap-5 ">
                   <img
-                    src={creator.imageUrl}
+                    src={creator?.imageUrl}
                     alt=""
                     className="w-12 h-12 rounded-full"
                   />
                   <div className="">
                     <p className="font-semibold truncate w-28">
-                      {creator.name}
+                      {creator?.name}
                     </p>
-                    <p className="text-sm text-gray-500">@{creator.username}</p>
+                    <p className="text-sm text-gray-500">
+                      @{creator?.username}
+                    </p>
                   </div>
                 </div>
                 <PlusSquare size={20} />

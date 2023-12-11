@@ -25,8 +25,8 @@ const Profile = () => {
 
   if (!currentUser)
     return (
-      <div className="sm:max-w-[500px] mx-auto flex justify-center items-center w-full h-full">
-        <img src="/loader.svg" alt="loading" />
+      <div className="sm:max-w-[500px] mx-auto flex justify-center items-center w-full h-full my-5">
+        <img src="/loader.svg" alt="loading" height={24} width={24} />
       </div>
     );
   return (

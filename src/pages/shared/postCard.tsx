@@ -27,7 +27,7 @@ const PostCard = ({ post }: PostCardProps) => {
       <div className="">
         <div className="flex justify-between w-full gap-2 p-2">
           <Link
-            href={`/profile/${post?.creator.$id}`}
+            href={`/routes/profile/${post?.creator.$id}`}
             className="flex items-center gap-2"
           >
             <img
