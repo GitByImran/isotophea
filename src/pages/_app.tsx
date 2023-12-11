@@ -49,6 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
                   <BottomNavbar />
                 </div>
               </div>
+
               <Suggest />
             </div>
           )}

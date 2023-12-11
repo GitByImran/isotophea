@@ -20,7 +20,11 @@ const Saved = () => {
     .reverse();
 
   if (!currentUser) {
-    return;
+    return (
+      <div className="sm:max-w-[500px] mx-auto flex justify-center my-5">
+        <img src="/loader.svg" alt="loading" height={24} width={24} />
+      </div>
+    );
   }
 
   return (

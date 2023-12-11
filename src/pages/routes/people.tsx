@@ -19,12 +19,12 @@ const People = () => {
     return;
   }
 
-  if (!creators) {
-    return;
-  }
-
-  if (!user) {
-    return;
+  if (!creators || !user) {
+    return (
+      <div className="sm:max-w-[500px] mx-auto flex justify-center my-5">
+        <img src="/loader.svg" alt="loading" height={24} width={24} />
+      </div>
+    );
   }
 
   const getCreators = creators?.documents.filter(
@@ -54,7 +54,7 @@ const People = () => {
             <Link
               href=""
               key={index}
-              className="col-span-12 overflow-hidden border shadow-md sm:col-span-6 rounded-xl"
+              className="col-span-6 overflow-hidden border shadow-md rounded-xl"
             >
               <div className="flex flex-col items-center gap-3 px-2 py-5">
                 <img

@@ -12,11 +12,15 @@ const HomePage: React.FC = () => {
   } = useGetRecentPosts();
 
   if (!posts) {
-    return;
+    return (
+      <div className="sm:max-w-[500px] mx-auto flex justify-center my-5">
+        <img src="/loader.svg" alt="loading" height={24} width={24} />
+      </div>
+    );
   }
 
   return (
-    <div className="mx-auto" style={{ maxWidth: 500 }}>
+    <div className="sm:max-w-[500px] mx-auto">
       <div className="flex items-center gap-2">
         <Newspaper size={20} strokeWidth={2} />
         <h2 className="text-lg"> Feed</h2>
