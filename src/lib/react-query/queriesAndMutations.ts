@@ -182,6 +182,7 @@ export const useGetPosts = () => {
   return useInfiniteQuery({
     queryKey: [QueryKeys.GET_INFINITE_POSTS],
     queryFn: getInfinitePosts as any,
+    initialPageParam: 1,
     getNextPageParam: (lastPage: any) => {
       // If there's no data, there are no more pages.
       if (lastPage && lastPage.documents.length === 0) {
