@@ -10,7 +10,6 @@ import {
 import { MonitorIcon, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-
 export const ModeToggle = () => {
   const { setTheme } = useTheme();
 

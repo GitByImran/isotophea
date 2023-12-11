@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { ModeToggle } from "../components/modeToggle";
+import { ModeToggle } from "../../components/ui/modeToggle";
 import { Separator } from "@/components/ui/separator";
 import { useSignOutAccount } from "@/lib/react-query/queriesAndMutations";
 import { initialUser, useUserContext } from "@/context/authContext";

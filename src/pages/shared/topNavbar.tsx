@@ -4,7 +4,7 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { ModeToggle } from "../components/modeToggle";
+import { ModeToggle } from "../../components/ui/modeToggle";
 
 const TopNavbar = () => {
   const router = useRouter();
