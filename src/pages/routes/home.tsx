@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <div className="flex items-center gap-2">
         <Newspaper size={20} strokeWidth={2} />
         <h2 className="text-lg"> Feed</h2>

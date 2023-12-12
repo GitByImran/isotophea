@@ -28,7 +28,7 @@ const Saved = () => {
   }
 
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <div className="flex gap-2">
         <Bookmark strokeWidth={2} size={20} /> Saved
       </div>

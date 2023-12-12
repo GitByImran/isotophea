@@ -30,7 +30,7 @@ const Profile = () => {
       </div>
     );
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <div>
         <div className="flex items-center justify-between">
           <div className="flex flex-row items-center w-full gap-5">

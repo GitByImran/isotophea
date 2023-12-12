@@ -32,7 +32,7 @@ const People = () => {
   );
 
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <div className="flex items-center gap-2">
         <UsersRound strokeWidth={2} size={20} />
         People

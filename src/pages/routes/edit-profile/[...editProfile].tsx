@@ -71,7 +71,7 @@ const EditProfile = () => {
   };
 
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleUpdate)}

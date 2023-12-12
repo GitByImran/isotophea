@@ -15,7 +15,7 @@ const TopNavbar = () => {
   };
 
   return (
-    <div className="w-full px-5 py-3 border-b">
+    <div className="w-full px-5 py-3">
       <div className="flex items-center justify-between">
         <div>
           <img src="/isotope-logo.png" alt="" className="w-10" />

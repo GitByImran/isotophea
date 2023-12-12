@@ -26,7 +26,7 @@ const ProfileUploader = ({ fieldChange, mediaUrl }: ProfileUploaderProps) => {
       <input {...getInputProps()} className="cursor-pointer" />
 
       <div
-        className="relative flex flex-col items-center w-24 h-24 overflow-hidden rounded-full cursor-pointer"
+        className="relative flex flex-col items-center w-24 h-24 overflow-hidden border rounded-full cursor-pointer"
         title="Click or Drag-Drop a photo"
       >
         <img
@@ -35,7 +35,7 @@ const ProfileUploader = ({ fieldChange, mediaUrl }: ProfileUploaderProps) => {
           className="object-cover object-top w-full h-full"
         />
         <p
-          className="absolute bottom-0 flex justify-center w-full p-1"
+          className="absolute bottom-0 flex justify-center w-full p-1 text-white"
           style={{
             background:
               "linear-gradient(-180deg, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .8))",

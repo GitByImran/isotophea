@@ -31,21 +31,17 @@ export default function App({ Component, pageProps }: AppProps) {
           {restrictedForBar.includes(router.asPath) ? (
             <Component {...pageProps} />
           ) : (
-            <div className="flex md:justify-between">
+            <div className="flex md:justify-between dark:bg-dark">
               <SideNavbar />
 
               <div className="flex-grow">
-                <div
-                  className={` w-full block sm:hidden dark:bottom-bar-dark dark:bg-black`}
-                >
+                <div className={`w-full block sm:hidden `}>
                   <TopNavbar />
                 </div>
-                <div className="p-5">
+                <div className="px-5">
                   <Component {...pageProps} />
                 </div>
-                <div
-                  className={`fixed bottom-0 w-full block sm:hidden dark:bottom-bar-dark dark:bg-black`}
-                >
+                <div className={`mt-16 w-full block sm:hidden`}>
                   <BottomNavbar />
                 </div>
               </div>

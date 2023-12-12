@@ -56,7 +56,7 @@ const PostDetails = () => {
   console.log(user, post);
 
   return (
-    <div className="sm:max-w-[500px] sm:mx-auto">
+    <div className="sm:max-w-[500px] sm:mx-auto my-5">
       <div className="flex items-center gap-2">
         <FileCheck size={20} strokeWidth={2} />
         <h2 className="text-lg"> Post</h2>
@@ -118,7 +118,7 @@ const PostDetails = () => {
                       variant={"destructive"}
                       size={"icon"}
                       onClick={handleDeletePost}
-                      className="text-red-500 rounded"
+                      className="text-white rounded"
                     >
                       <Trash size={16} />
                     </Button>
@@ -126,7 +126,7 @@ const PostDetails = () => {
                       <Button
                         variant={"secondary"}
                         size={"icon"}
-                        className="text-red-500 rounded"
+                        className="text-black rounded"
                       >
                         <PenSquare size={16} />
                       </Button>
@@ -135,7 +135,7 @@ const PostDetails = () => {
                       variant={"default"}
                       size={"icon"}
                       onClick={handleCopyLink}
-                      className="text-red-500 rounded"
+                      className="text-white rounded"
                     >
                       <Clipboard size={16} />
                     </Button>

@@ -44,7 +44,7 @@ const SearchBox = () => {
     );
   }
   return (
-    <div className="sm:max-w-[500px] sm:mx-auto">
+    <div className="sm:max-w-[500px] sm:mx-auto my-5">
       <div className="relative flex items-center gap-3">
         <input
           id="searchInput"
@@ -59,13 +59,9 @@ const SearchBox = () => {
       </div>
       <div className="my-2 text-sm text-gray-500">
         {isSearchFetching && (
-          <img
-            src="/loader.svg"
-            alt=""
-            height={24}
-            width={24}
-            className="my-5"
-          />
+          <div className="flex justify-center my-5">
+            <img src="/loader.svg" alt="loading" height={24} width={24} />
+          </div>
         )}
         {searchedPosts?.documents.length === 0 && (
           <div className="mt-2">

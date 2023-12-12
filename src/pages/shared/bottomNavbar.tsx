@@ -10,7 +10,9 @@ const BottomNavbar = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`w-full px-5 py-2 border-t root bottom-light`}>
+    <div
+      className={`fixed bottom-0 w-full px-5 py-2 border-t dark:border-gray-500 root  dark:bg-black bg-white`}
+    >
       <div className="flex flex-row justify-between gap-3 nav-menus">
         <Link
           href="/"

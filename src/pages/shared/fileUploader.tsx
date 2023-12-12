@@ -52,11 +52,13 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
               style={{ background: "hsla(229, 84%, 5%, 0.8)" }}
             >
               <ArrowDownSquare />
-              <p>Drop the files here ...</p>
+              <p className="text-center">Drop the files here ...</p>
             </div>
           )}
-          <p>Drag and drop files here, or click to select files</p>
-          <p className="text-sm font-semibold text-gray-500">
+          <p className="text-center">
+            Drag and drop files here, or click to select files
+          </p>
+          <p className="text-sm font-semibold text-center text-gray-500">
             *png - *jpg - *jpeg - *svg -*gif
           </p>
           <Button variant={"secondary"} className="mt-5">

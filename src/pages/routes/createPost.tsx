@@ -58,7 +58,7 @@ const CreatePost = ({ post }: PostFormProps) => {
     }
   };
   return (
-    <div className="sm:max-w-[500px] mx-auto">
+    <div className="sm:max-w-[500px] mx-auto my-5">
       <div>
         <div className="flex gap-2">
           <ImagePlus size={20} strokeWidth={2} />
